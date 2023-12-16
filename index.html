@@ -1,63 +1,40 @@
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<script type='text/javascript' src='//pl21088929.toprevenuegate.com/7d/3b/26/7d3b2636b068dd824d816fb68627e10f.js'></script>
-</head>    
-<meta name=robots content=noindex />
-<style>body{margin:0;padding:0}</style>
-<script>
-function getParameterByName(name) {
-  name = name.replace(/[\[]/, "\[").replace(/[\]]/, "\]");
-  var regex = new RegExp("[\?&]" + name + "=([^&#]*)"),
-  results = regex.exec(location.search);
-  return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-var getURL = getParameterByName('get');
-var getLang = getParameterByName('lang');
-var getIMG = getParameterByName('img');
-var getKEY  = getParameterByName('key');
-var getKEY2  = getParameterByName('key2');
-</script>
-<script src="//ssl.p.jwpcdn.com/player/v/8.26.0/jwplayer.js"></script>
-<script> jwplayer.key = 'XSuP4qMl+9tK17QNb+4+th2Pm9AWgMO/cYH8CI0HGGr7bdjo';
-</script>
-<div id="player"></div>
-<script>
-var mt = ["//edge-live02-mun", "//edge-live01-bel", "//edge-live02-bel", "//edge-live11-hr", "//edge-live12-hr", "//edge-live13-hr", "//edge-live14-hr", "//edge-live15-hr", "//edge-live16-hr", "//edge-live17-hr", "//edge-live31-hr", "//edge-live32-hr", "//edge-live12-sl", "//edge-live13-sl", "//edge-live15-sl", "//edge-live16-sl", "//edge-live17-sl", "//edge-live31-sl", "//edge-live32-sl", "//edge-vod02-sl", "//edge-vod04-sl", "//edge9-sl", "//edge10-sl"];
-var random = Math.floor(Math.random() * mt.length);
-var playerInstance = jwplayer("player");
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Zarismo: Historia, Desarrollo y Desenlace</title>
+</head>
+<body>
+    <header>
+        <h1>Zarismo: Una Mirada Profunda</h1>
+    </header>
 
-playerInstance.setup({
-    playlist: [{
-      title : "REPRODUCTOR | Mega Deportes TV",
-      description: "megadeportes.xyz",
-        "sources": [
-            {
-                "default": false,
-                "type": "dash",
-                "file": mt[random] + atob(getURL), 
-                "drm": {
-                    "clearkey": { "keyId": atob(getKEY), "key": atob(getKEY2)}
-                },
-                "label": "0"
-            }
-        ]
-    }],
-    width: "100%",
-    height: "100%",
-    aspectratio: "16:9",
-    autostart: false,
-    cast: {},
-    sharing: {}
-});
+    <main>
+        <!-- Sección de Historia -->
+        <section id="historia" class="card">
+            <h2>Historia del Zarismo</h2>
+            <p>Tu contenido sobre la historia del zarismo va aquí.</p>
+        </section>
 
-if (getLang == "") {
-    var lang = 1;
-} else {
-    var lang = parseInt(getLang); 
-}
+        <!-- Sección de Desarrollo -->
+        <section id="desarrollo" class="card">
+            <h2>Desarrollo del Zarismo</h2>
+            <p>Información sobre el desarrollo del zarismo.</p>
+        </section>
 
-jwplayer().on('play', function(e) {
-  jwplayer().setCurrentAudioTrack(lang);
-});
-</script>
+        <!-- Sección de Desenlace -->
+        <section id="desenlace" class="card">
+            <h2>Desenlace del Zarismo</h2>
+            <p>Detalles sobre el desenlace del zarismo.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Zarismo Web. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
